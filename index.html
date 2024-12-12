@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Mix Design Strength Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Concrete Mix Design Strength Calculator</h1>
+        <form id="mixDesignForm">
+            <div class="form-group">
+                <label for="cementContent">Cement Content (kg/m³):</label>
+                <input type="number" id="cementContent" required>
+            </div>
+            <div class="form-group">
+                <label for="waterCementRatio">Water-Cement Ratio:</label>
+                <input type="number" id="waterCementRatio" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="fineAggregate">Fine Aggregate Content (kg/m³):</label>
+                <input type="number" id="fineAggregate" required>
+            </div>
+            <div class="form-group">
+                <label for="coarseAggregate">Coarse Aggregate Content (kg/m³):</label>
+                <input type="number" id="coarseAggregate" required>
+            </div>
+            <div class="form-group">
+                <label for="admixtureDosage">Admixture Dosage (% by weight of cement):</label>
+                <input type="number" id="admixtureDosage" step="0.1" required>
+            </div>
+            <button type="submit">Calculate Strength</button>
+        </form>
+        <div id="results" class="hidden">
+            <h2>Results</h2>
+            <p id="strengthResult"></p>
+            <h3>Suggestions for Increasing Strength:</h3>
+            <ul id="suggestions"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
